@@ -20,7 +20,11 @@ class student:
     print("HAPPY BIRTHDAY!!!")
     self.age=self.age+1
     print("new age",self.age)
-    
+student1 = student(101, "Ifra", 16, "Python")
+
+student1.display_info()
+student1.update_course()
+student1.birthday()    
     
     
     
