@@ -1,34 +1,37 @@
 # 🚀 100 Days of Python Challenge
 
-Hi, I'm Ifra Naz.
+Hi, I'm **Ifra Naz**! 👋  
+This repository contains my daily Python projects as part of my **#100DaysOfCode** journey.
 
-This repository contains my daily Python projects as part of my #100DaysOfCode journey.
+---
 
-## Skills
+## 🛠 Skills Covered
+* 🐍 **Python Basics:** Functions, Dictionaries, Lambda Functions, File Handling
+* 🛡 **Error Handling:** Exception Handling & Validation
+* 🏗 **Object-Oriented Programming (OOP):** Inheritance, Classes & Methods
+* 🔧 **Tools:** Git & GitHub
 
-- Python
-- Problem Solving
-- File Handling
-- Exception Handling
-- Functions
-- Lambda Functions
-- Dictionaries
-- Git & GitHub
+---
 
-## Projects
+## 📂 Projects Completed So Far
 
-✔ Smart Bill Calculator
+### 🟢 Object-Oriented Programming (OOP) & Advanced
+* ✔ **ATM Banking System** (`ATM_banking_system.py`)
+* ✔ **OOP Inheritance & Employee Manager** (`oop_inheritance.py`)
+* ✔ **RPG Character Creator** (`RPG_character_creator.py`)
+* ✔ **Library Management System** (`library_management_system.py`)
 
-✔ Temperature Converter
+### 🟡 Logic & Utility Apps
+* ✔ **Smart Bill Calculator** (`smart_bill_calculator.py`)
+* ✔ **Temperature Converter** (`temperature_convertor.py`)
+* ✔ **Email Domain Extractor** (`email_filter.py`)
+* ✔ **Text Frequency Counter** (`text_frequency_counter.py`)
+* ✔ **Daily Journal App** (`daily_journal_app.py`)
+* ✔ **Crash-Free Login System** (`crash_free_login.py`)
+* ✔ **Expense Tracker** (`Expense Tracker.py`)
 
-✔ Email Domain Extractor
+> 🚀 *More projects are updated daily!*
 
-✔ Text Frequency Counter
+---
 
-✔ Daily Journal App
-
-✔ Crash-Free Login System
-
-More projects are coming every day.
-
-⭐ Follow my learning journey.
+⭐ **Feel free to star this repository if you find it helpful!**
