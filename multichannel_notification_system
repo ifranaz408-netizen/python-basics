@@ -1,0 +1,75 @@
+class Notification:
+  def __init__(self,notification_id,message,recipient):
+    self.notification_id=notification_id
+    self.message=message
+    self.recipient=recipient
+  def display_details(self):
+    print("notification id is :",self.notification_id)
+    print("notifion message:",self.message)
+    print("recipient:",self.recipient)
+  def send(self):
+    pass 
+class EmailNotification(Notification):
+  def __init__(self,notification_id,message,recipient,subject):
+    super().__init__(notification_id,message,recipient)
+    self.subject=subject
+  def send(self):
+    print("Subject:", self.subject)
+    print("Recipient:", self.recipient)
+    print("Message:", self.message)
+  def attach_file(self,filename):
+    print(" Attached file :",filename)
+class SMSNotification(Notification):
+  def __init__(self,notification_id,message,recipient,sms_provider):
+      super().__init__(notification_id,message,recipient)
+      self.sms_provider=sms_provider
+  def send(self):
+    print("sms_provider:", self.sms_provider)
+    print("Recipient:", self.recipient)
+    print("Message:", self.message)
+  def check_sms_length(self):
+    print("sms lenght:",len(self.message))
+class PushNotification(Notification):
+  def __init__(self,notification_id,message,recipient,device_token):
+    super().__init__(notification_id,message,recipient)
+    self.device_token=device_token
+  def send(self):
+    print("device_token:", self.device_token)
+    print("Recipient:", self.recipient)
+    print("Message:", self.message)
+  def schedule_notification(self,time):
+    print("Notification scheduled for :", time)
+email = EmailNotification(
+    notification_id=101, 
+    message="Welcome to our platform!", 
+    recipient="user@example.com", 
+    subject="Welcome!"
+)
+email.display_details()
+email.send()
+email.attach_file("welcome_guide.pdf")
+
+print("-" * 40)
+
+# --- SMS Notification Call ---
+sms = SMSNotification(
+    notification_id=102, 
+    message="Your OTP is 45892", 
+    recipient="+1234567890", 
+    sms_provider="Twilio"
+)
+sms.send()
+sms.check_sms_length()
+
+print("-" * 40)
+
+# --- Push Notification Call ---
+push = PushNotification(
+    notification_id=103, 
+    message="You have a new message", 
+    recipient="User_App_ID", 
+    device_token="XYZ_TOKEN_99"
+)
+push.send()
+push.schedule_notification("10:00 AM")
+    
