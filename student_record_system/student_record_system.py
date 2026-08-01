@@ -1,3 +1,4 @@
+import json 
 class student:
     def __init__(self,id,name,age,course):
       self.id=id
@@ -9,9 +10,43 @@ class student:
       print("Student Name:",self.name)
       print("Student Age :",self.age)
       print("Student Course:",self.course)
+    def to_dict(self):
+        return {
+          "id":self.id, "name":self.name,"age":self.age,"course":self.course
+          }
+      
 class StudentManager:
   def __init__(self):
     self.students=[]
+    self.load_students()
+  def load_students(self):
+      try:
+        with open ("students.json","r") as file:
+          data= json.load(file)
+        for record in data :
+           new_student = student(
+                    record["id"],
+                    record["name"],
+                    record["age"],
+                    record["course"]
+                )
+
+           self.students.append(new_student)
+      except FileNotFoundError:
+        self.students = []
+
+      except json.JSONDecodeError:
+         self.students = []
+
+  def  save_students(self):
+
+    with open("students.json", "w") as file:
+        data = []
+
+        for student in self.students:
+            data.append(student.to_dict())
+
+        json.dump(data, file, indent=4)
   def add_student(self):
     student_ID = input("Enter Student ID :")
     student_name = input("Enter Student name :")
@@ -19,13 +54,17 @@ class StudentManager:
     student_course= input("Enter Student course:")
     new_student = student(student_ID,student_name,student_age,student_course)
     self.students.append(new_student)
+    self.save_students()
     print("Student Added Successfully!")
+    
   def view_students(self):
     if  not self.students:
       print("No Student Records Found!")
     else:
       for student in self.students:
         student.display()
+        print("-" * 35)
+        print()
   def search_student(self):
      user_id = input("Enter Student ID :")
      found = False
@@ -35,7 +74,7 @@ class StudentManager:
           student.display()
           found = True
           break
-    if found == False:
+     if found == False:
       print("Student Not Found!")
   def update_student(self):
      user_id = input("Enter Student ID :")
@@ -48,6 +87,7 @@ class StudentManager:
           student.name = new_name
           student.age = input("Enter new Age: ")
           student.course = input("Enter new Course: ")
+          self.save_students()
           print("student Updated !!") 
           found = True
           break
@@ -61,6 +101,7 @@ class StudentManager:
         print("student found!!") 
         student.display()
         self.students.remove(student)
+        self.save_students()
         print("student Deleted!!")         
         found = True
         break
@@ -77,19 +118,24 @@ while True:
   print("4. Update Student")
   print("5. Delete Student")
   print("6. Exit")
-  choice=input("enter your choice(1 to 6)")
+  choice=input("enter your choice(1 to 6): ")
   if choice == "1":
     manager.add_student()
   elif choice == "2":
         manager.view_students()
+        input("\nPress Enter to continue...")
   elif choice == "3":
         manager.search_student()
+        input("\nPress Enter to continue...")
   elif choice == "4":
         manager.update_student()
+        input("\nPress Enter to continue...")
   elif choice == "5":
         manager.delete_student()
+        input("\nPress Enter to continue...")
   elif choice == "6":
         print("Exiting program. Goodbye!")
+        input("\nPress Enter to continue...")
         break
   else:
        print("Invalid choice! Please try again.")

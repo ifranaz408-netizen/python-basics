@@ -1,0 +1,26 @@
+[
+    {
+        "id": "102",
+        "name": "Sara",
+        "age": "19",
+        "course": "Web Development"
+    },
+    {
+        "id": "103",
+        "name": "Ahmed",
+        "age": "20",
+        "course": "Data Science"
+    },
+    {
+        "id": "104",
+        "name": "Ayesha",
+        "age": "18",
+        "course": "Graphic Design"
+    },
+    {
+        "id": "101",
+        "name": "ayan",
+        "age": "17",
+        "course": "app  development"
+    }
+]
