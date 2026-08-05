@@ -1,0 +1,66 @@
+[
+    {
+        "id": "101",
+        "title": "Python Tutor",
+        "category": "Education",
+        "prompt_text": "Explain Python concepts in simple language with examples.",
+        "tags": "python,beginner,education",
+        "favorite": true
+    },
+    {
+        "id": "102",
+        "title": "LinkedIn Post Writer",
+        "category": "Writing",
+        "prompt_text": "Write a professional LinkedIn post for my project.",
+        "tags": "linkedin,writing,social",
+        "favorite": true
+    },
+    {
+        "id": "103",
+        "title": "Code Debugger",
+        "category": "Programming",
+        "prompt_text": "Find bugs in my Python code and explain the fixes.",
+        "tags": "python,debug,programming",
+        "favorite": false
+    },
+    {
+        "id": "104",
+        "title": "Resume Builder",
+        "category": "Career",
+        "prompt_text": "Create an ATS-friendly resume for a Python developer.",
+        "tags": "resume,career,ats",
+        "favorite": true
+    },
+    {
+        "id": "105",
+        "title": "Travel Planner",
+        "category": "Lifestyle",
+        "prompt_text": "Plan a 3-day budget-friendly trip with itinerary.",
+        "tags": "travel,budget,planner",
+        "favorite": false
+    },
+    {
+        "id": "106",
+        "title": "Logo Designer",
+        "category": "Design",
+        "prompt_text": "Generate a modern logo concept for a startup.",
+        "tags": "logo,design,branding",
+        "favorite": false
+    },
+    {
+        "id": "101",
+        "title": "developer",
+        "category": "education",
+        "prompt_text": "expalin the developer lanuages",
+        "tags": "developer,beginner,education",
+        "favorite": true
+    },
+    {
+        "id": "201",
+        "title": "Python Tutor",
+        "category": "Education",
+        "prompt_text": "Explain Python concepts in simple language with examples.",
+        "tags": "python,beginner,education",
+        "favorite": true
+    }
+]
