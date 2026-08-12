@@ -29,7 +29,7 @@ Modern responsive digital studio website built with HTML, CSS and JavaScript.
 
 ## Live Demo
 
-Your Netlify URL
+https://nexa-digital-studio.netlify.app/
 
 ## Future Improvements
 

@@ -153,15 +153,12 @@ function showToast(message) {
 const agentButton = document.getElementById("agentButton");
 
 if (agentButton) {
-
     agentButton.addEventListener("click", () => {
-
-        showToast(
-            "AI Assistant will be available here soon."
+        window.open(
+            "https://elevenlabs.io/app/talk-to?agent_id=agent_5201kzr6e21hfh0rc4jvv383qg36&branch_id=agtbrch_1901kzr6e2jzfjzbfkkmh3mwdn8y",
+            "_blank"
         );
-
     });
-
 }
 
 
